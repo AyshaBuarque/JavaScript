@@ -9,7 +9,6 @@ function convertValues() {
     const dolarToday = 5.4
     const euroToday = 6.3
     const libraToday = 7.4
-    const bitcoinToday = 0.00000004
 
     if (currencySelect.value == "dolar") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -62,11 +61,6 @@ function changeCurrency () {
     if (currencySelect.value == "libra"){
         currencyName.innerHTML = "Libra esterlina"
         currencyImage.src = "./assets/logo-UK.png"
-    }
-
-    if (currencySelect.value == "bit"){
-        currencyName.innerHTML = "Bitcoin"
-        currencyImage.src = "./assets/logo-Btc.png"
     }
 
     convertValues()
