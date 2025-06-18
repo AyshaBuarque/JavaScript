@@ -25,7 +25,10 @@ function convertValues() {
     }
 
     if (currencySelect.value == "libra") {
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("")
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue/libraToday)
     }
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -49,8 +52,11 @@ function changeCurrency () {
         currencyImage.src = "./assets/logo-Euro.png"
     }
 
-
-
+    if (currencySelect.value == "libra"){
+        currencyName.innerHTML = "Libra esterlina"
+        currencyImage.src = "./assets/logo-UK.png"
+    }
+    
     convertValues()
 }
 
