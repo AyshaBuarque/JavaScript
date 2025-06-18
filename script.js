@@ -29,4 +29,20 @@ function convertValues() {
     }).format(inputCurrencyValue)
 }
 
+
+function changeCurrency () {
+    const currencyName = document.getElementById ("currency-name")
+
+
+    if (currencySelect.value == "dolar") {
+        currencyName.innerHTML = "Dólar americano"
+    }
+    
+     if (currencySelect.value == "euro") {
+        currencyName.innerHTML = "Euro"
+    }
+   
+}
+
+currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
